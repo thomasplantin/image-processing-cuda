@@ -41,6 +41,9 @@ __global__ void horizontalFlip(stbi_uc* input_image, stbi_uc* output_image, int 
     int x_coordinate_2 = width - x_coordinate_1;
     Pixel leftPixel, rightPixel;
 
+    printf("Height = %d\n", height);
+    printf("Width = %d\n", width);
+
     getPixel(input_image, width, x_coordinate_1, y_coordinate, &leftPixel);
     getPixel(input_image, width, x_coordinate_2, y_coordinate, &rightPixel);
 
